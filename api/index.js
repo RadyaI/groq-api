@@ -1,8 +1,12 @@
 import Fastify from 'fastify'
+import 'dotenv'
+import chat from './routes/chatRoute'
 
 const app = Fastify({
   logger: true,
 })
+
+app.register(chat, { prefix: '/chat' })
 
 app.get('/', async (req, reply) => {
   return reply.status(200).type('text/html').send(html)
