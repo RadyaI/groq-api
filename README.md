@@ -1,21 +1,20 @@
-# Fastify + Vercel
+# Groq API
 
-This example shows how to use Fastify with Vercel Functions.
+Ini api yang dibuat menggunakan [Groq API](https://groq.com) yang dibuat ulang untuk memudahkan menggunakan api nya jadi tinggal langsung pake saja di frontend.
 
-## Demo
+Untuk api yang ini menggunakan model `llama3-8b-8192` ya gitu dah intinya ini udah tinggal dipake aja.
 
-https://fastify-example.vercel.app/
+## Gimana cara pakainya?
 
-## Running Locallly
+Buat endpointnya sendiri yaitu `groq-api.radya.fun/chat` methodnya **POST** dan untuk request body isinya ada ini:
 
-```bash
-npm i
-npm i -g vercel@latest
-vercel dev
+```json
+{
+  "msg": "",
+  "password": ""
+}
 ```
+- **msg:** Ini buat chat yang mau ditanya ke groq.
+- **password:** Ini ya password buat bisa pake api nya, passwordnya apa? rahasia dong hehe.
 
-## One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/starter/fastify&project-name=fastify&repository-name=fastify)
+Made by [Radya](https://radya.fun)
