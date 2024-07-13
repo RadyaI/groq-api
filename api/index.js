@@ -1,7 +1,7 @@
 import Fastify from 'fastify'
 import 'dotenv'
 import chat from './routes/chatRoute'
-import cors from 'fastify-cors'
+import cors from '@fastify/cors'
 
 const app = Fastify({
   logger: true,
