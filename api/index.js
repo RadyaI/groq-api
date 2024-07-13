@@ -1,10 +1,13 @@
 import Fastify from 'fastify'
 import 'dotenv'
 import chat from './routes/chatRoute'
+import cors from 'fastify-cors'
 
 const app = Fastify({
   logger: true,
 })
+
+app.register(cors)
 
 app.register(chat, { prefix: '/chat' })
 
